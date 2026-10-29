@@ -1,46 +1,40 @@
 # Third-Party Notices
 
-This repository contains original DSH Live Editor source and synthetic test fixtures. It does not
-vendor a built client bundle or third-party source trees. Third-party packages are installed from
-npm and retain their own license files in `node_modules`.
+This repository contains original DSH Live Editor source and original synthetic fixtures. It does
+not vendor third-party source trees or a built client bundle. Third-party packages are installed
+from npm and keep their own license and copyright files in the installed package tree.
 
-The following direct dependencies are used. Versions are pinned in the relevant package manifests
-and lockfiles; copyright and full license text are shipped in each package.
+## Direct dependencies
 
-| Project | Typical use | License |
+| Package / project | Copyright / maintainer (as stated by the package) | License |
 | --- | --- | --- |
-| React / React DOM | editor and preview UI | MIT |
-| CodeMirror 6 (`@codemirror/*`) | source editor and Markdown language support | MIT |
-| Lezer (`@lezer/*`) | grammar/parser support | MIT |
-| Docusaurus (`@docusaurus/*`, pinned 3.10.1) | local dev preview and synthetic fixture site | MIT |
-| unified / remark / rehype packages | MDX/Markdown parsing and rendering | MIT |
-| remark-math-extended 6.1.1 | TeX delimiters in MDX | MIT |
-| KaTeX / rehype-katex | math rendering | MIT |
-| esbuild | client bundle build | MIT |
-| Mermaid / `@docusaurus/theme-mermaid` | synthetic-site diagram support | MIT |
-| prism-react-renderer | code highlighting in the fixture site | MIT |
-| `@mdx-js/react` | MDX React runtime in the fixture site | MIT |
-| TypeScript / `@swc/core` | development/build tooling (transitive/dev) | Apache-2.0 |
+| React, React DOM | Meta Platforms, Inc. and affiliates | MIT |
+| CodeMirror 6 (`@codemirror/*`) | Marijn Haverbeke and contributors | MIT |
+| Lezer (`@lezer/*`) | Marijn Haverbeke and contributors | MIT |
+| Docusaurus (`@docusaurus/core`, preset-classic, theme-mermaid, faster, pinned 3.10.1) | Meta Platforms, Inc. and affiliates | MIT |
+| unified / remark / rehype packages | unified collective and contributors | MIT |
+| remark-math-extended 6.1.1 | duz52 and contributors | MIT |
+| remark-math (test fixture dependency) | Titus Wormer and contributors | MIT |
+| KaTeX / rehype-katex | Khan Academy and contributors | MIT |
+| esbuild | Evan Wallace and contributors | MIT |
+| Mermaid / `@docusaurus/theme-mermaid` | Knut Sveidqvist and contributors | MIT |
+| prism-react-renderer | prism-react-renderer contributors | MIT |
+| `@mdx-js/react` | MDX contributors | MIT |
+| clsx | Luke Edwards and contributors | MIT |
+| react-test-renderer (test-only) | Meta Platforms, Inc. and affiliates | MIT |
+| TypeScript | Microsoft Corporation | Apache-2.0 |
+| `@swc/core` (transitive development/build dependency) | SWC project contributors | Apache-2.0 |
 
-Transitive dependencies are not exhaustively enumerated here; their licenses are available in the
-installed package trees and lockfiles. If a future release distributes a bundled `client.js` or
-other build artifact, the release process must preserve the license banners/notices for every
-bundled package, including CodeMirror, Lezer, React and Docusaurus components. The current
-repository deliberately excludes the generated bundle.
+Transitive dependencies are not exhaustively listed here. Their licenses are present in the
+installed package trees and resolved versions are recorded in the lockfiles. The MPL-2.0 license in
+this repository applies to original project code; third-party files remain under the licenses above.
 
-## Research and design acknowledgements (not bundled code)
+## Built artifacts and future releases
 
-- **DSH Better Sidebar** 0.28.1 (MIT source used locally): sidebar/workbench integration and UX
-  reference. No source copied into this repository. Marketplace packaging metadata has differed
-  from the upstream source license; no GPL-licensed package code is included here.
-- **Docusaurus PR #10185** and the Docusaurus docs plugin: reload/content-map design reference.
-  The project uses Docusaurus as a dependency; no PR source was copied.
-- **VS Code Markdown Preview** (MIT): document identity and stale-preview design reference; no source
-  copied.
-- **`duz52/remark-math-extended`** (MIT): direct dependency for math delimiters.
-- **`Yurzi/dsh-pdf-mineru`**, **MinerU**, **Docling**, **PaddleOCR**, **PDF.js** and related OCR/PDF
-  projects: research only, not bundled. MinerU and any OCR models/services have their own licenses;
-  consult those projects before any future integration.
+The generated `prototypes/phase2/dsh-bundle/lib/client.js` bundle is deliberately excluded from this
+repository. If a future release distributes a built bundle, that release must preserve the license
+and copyright notices for every bundled package, including CodeMirror, Lezer, React, Docusaurus and
+the other dependencies above. The present repository does not distribute such a bundle.
 
-No third-party project has endorsed this repository. If you believe a required notice is missing,
-please open an issue rather than assuming an endorsement.
+Design acknowledgements and links to the projects that informed the implementation are in the
+README. They are not additional license grants and do not imply endorsement by those projects.
