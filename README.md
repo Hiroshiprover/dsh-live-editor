@@ -88,15 +88,13 @@ The built client must be connected to a local DSH profile using DSH's plugin-loa
 
 ### Run the test site
 
-The repository includes a small Docusaurus fixture site containing original sample documents for development and testing.
+The repository includes a Docusaurus test site with original sample content created specifically for development and testing.
 
 ```bash
 cd prototypes/phase2/site
 npm ci
 npm start -- --port 3000 --no-open
 ```
-
-The fixture site does not contain the author's private notes, textbook scans, or personal documents.
 
 To run the automated tests from `prototypes/phase2`:
 

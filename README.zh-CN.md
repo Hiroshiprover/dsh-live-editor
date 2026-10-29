@@ -88,15 +88,13 @@ npm run build
 
 ### 运行测试站点
 
-仓库提供一个使用原创测试内容构建的 Docusaurus 站点，用于开发和功能验证。
+仓库提供一个专门用于开发与功能验证的 Docusaurus 测试站点，其中的内容均为独立编写的测试样例。
 
 ```bash
 cd prototypes/phase2/site
 npm ci
 npm start -- --port 3000 --no-open
 ```
-
-测试站点不包含作者的私人笔记、教材扫描图片或其他个人资料。
 
 自动测试可以在 `prototypes/phase2` 目录执行：
 
