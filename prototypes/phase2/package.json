@@ -1,0 +1,29 @@
+{
+  "name": "dsh-live-editor-phase2-dev",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Development, build and test dependencies for the Phase 2 Live Editor bundle. The DSH runtime provides React and @deepseek-ai/dsh-client-ui-primitives as externals.",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test --test-concurrency=1 \"../../tests/phase2/*.test.mjs\""
+  },
+  "dependencies": {
+    "@codemirror/commands": "6.11.1",
+    "@codemirror/lang-markdown": "6.5.2",
+    "@codemirror/language": "6.13.1",
+    "@codemirror/state": "6.7.6",
+    "@codemirror/view": "6.43.15",
+    "@lezer/highlight": "1.2.5",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "remark-math-extended": "6.1.1",
+    "remark-mdx": "3.1.1",
+    "remark-parse": "11.0.0",
+    "unified": "11.0.5"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10",
+    "react-test-renderer": "19.2.6"
+  }
+}

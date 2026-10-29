@@ -1,0 +1,25 @@
+{
+  "name": "dsh-live-editor-phase2",
+  "version": "0.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Phase 2 bundle: read-only docs index + document store client + existing save/CAS/backup routes (test site only).",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "runtime": "host",
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  }
+}

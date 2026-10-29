@@ -1,0 +1,13 @@
+{
+  "name": "docusaurus-plugin-dsh-live-editor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dev-only Docusaurus plugin that exposes doc identity + block annotations to the DSH Live Editor iframe bridge.",
+  "type": "module",
+  "main": "src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./rehype/annotate": "./src/rehype/annotate.mjs",
+    "./rehype/annotate-math": "./src/rehype/annotate-math.mjs"
+  }
+}

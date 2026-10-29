@@ -1,0 +1,36 @@
+# Local-only internal development notes (never publish)
+/AGENTS.md
+/PLAN.md
+
+# Dependencies and package-manager state
+node_modules/
+**/node_modules/
+.pnpm-home/
+.corepack/
+
+# Builds and generated state
+build/
+**/build/
+.docusaurus/
+**/.docusaurus/
+.dsh-live-editor/
+**/.dsh-live-editor/
+dist/
+**/dist/
+prototypes/phase2/dsh-bundle/lib/client.js
+*.tsbuildinfo
+
+# Local/private runtime material
+backups/
+**/backups/
+*.log
+.env
+.env.*
+.DS_Store
+coverage/
+.cache/
+.turbo/
+
+# Local editor/OS noise
+.idea/
+.vscode/

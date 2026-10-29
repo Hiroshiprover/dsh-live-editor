@@ -1,0 +1,39 @@
+---
+title: LaTeX highlight regression
+sidebar_position: 999
+---
+
+# Heading 1
+
+Normal paragraph with *emphasis*, **strong**, [a link](https://example.com) and `inline code`.
+
+## Inline math
+
+$\phi_\varepsilon$ and $\partial_\mu\phi$ should not become Markdown emphasis.
+
+Relations: $a \leq b$, $a \geq b$, $a \equiv b$, $a \approx b$, $a \ll b$.
+
+Special fonts/accents: $\mathcal{L}$, $\mathbf{v}$, $\hat{\phi}$, $\tilde{\phi}$.
+
+Functions: $\sin(x)$, $\cos(x)$, $\ln(x)$, $\exp(x)$, $\lim_{x\to0}$.
+
+## Display math
+
+$$
+\begin{aligned}
+\delta S
+&=\int d^4x\,
+\frac{\partial\mathcal L}{\partial\phi}\eta\\
+&+\int d^4x\,
+\frac{\partial\mathcal L}{\partial(\partial_\mu\phi)}
+\partial_\mu\eta.
+\end{aligned}
+$$
+
+:::note[Admonition]
+MDX comment: {/* this is a comment */}
+
+```js
+const x = 1
+```
+:::
