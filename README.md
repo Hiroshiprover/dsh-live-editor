@@ -60,7 +60,7 @@ There is no packaged release or one-click installer. Running the editor currentl
 
 - macOS
 - A local DeepSeek Harness installation capable of loading plugins
-- Node.js 20 or later and npm
+- Node.js 22.12 or later and npm (currently verified with Node.js 24.22.1)
 - Docusaurus 3.10.1 (the currently tested version)
 - An existing Docusaurus website
 
@@ -75,7 +75,6 @@ git clone https://github.com/Hiroshiprover/dsh-live-editor.git
 cd dsh-live-editor
 ```
 
-While the repository remains private, access requires authorization.
 
 ### Build the editor
 
@@ -130,6 +129,24 @@ DSH Live Editor is still an early-stage project. Its current limitations include
 - **Setup and operation:** A local Docusaurus development server must be started and configured manually. A streamlined installer, startup process, and deployment workflow have not yet been provided.
 
 For important documents, keep independent backups and begin with small edits when testing the plugin in a new environment.
+
+## Development & Maintenance
+
+I'm an undergraduate student with a background in physics, and I haven't received formal training in software engineering. My understanding of some technical details is also limited.
+
+This project started as a spontaneous idea. As of October 29, 2026, it has undergone only about a week of local testing and has been developed primarily through *vibe coding*. Most of the code has been written with the help of **DeepSeek Harness**, while **ChatGPT** has assisted with code reviews and security checks, and **Codex** has been used to tackle implementation problems that DeepSeek Harness couldn't resolve.
+
+For these reasons, I cannot guarantee that the project will work reliably in every environment. Bug reports, suggestions, and contributions are very welcome through GitHub Issues. However, given my limited time and experience, I cannot promise to resolve every issue. Please keep independent backups before using this project to edit important documents.
+
+Thank you to everyone who is willing to give this project a try and help make it better!
+
+## Data and security notes
+
+- Single-image recognition uses the model service currently configured in DSH; image content may be sent to an external provider and may incur charges.
+- Drafts, save backups, and runtime state are stored locally; exact storage locations and cleanup behavior depend on the implementation, so review them before important use.
+- The Docusaurus development server is intended for local use only and should not be exposed to untrusted networks.
+- MDX can contain executable components or code; only edit site content from trusted sources.
+- The synthetic test site's development and build dependencies currently have unresolved security advisories. This project does not claim that they have been proven unexploitable.
 
 ## Roadmap
 
